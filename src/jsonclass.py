@@ -11,8 +11,7 @@ class JSONClass:
         _json_classes[cls.__qualname__] = cls
 
     def __new__(cls, data: Dict[str, Any] = None):
-        __data = data or {}
-        __data["__json_class__"] = cls.__qualname__
+        __data = data or {"__json_class__": cls.__qualname__}
         __instance = object.__new__(_json_classes[__data["__json_class__"]])
         object.__setattr__(__instance, "__json_data", __data)
         return __instance

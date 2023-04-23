@@ -5,7 +5,7 @@ class Test(JSONClass):
     field: str
 
 
-test = Test({"field": "value"})
+test = JSONClass({"__json_class__": "Test", "field": "value"})
 assert isinstance(test, Test)
 assert test.field == "value"
 
