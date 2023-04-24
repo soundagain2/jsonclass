@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "jsonclass"
-version = "0.0.6"
+version = "0.0.9"
 authors = [
   { name="soundagain2", email="soundagain2@proton.me" },
 ]
@@ -21,4 +21,4 @@ classifiers = [
 "Bug Tracker" = "https://github.com/soundagain2/jsonclass/issues"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/jsonclass.py"]
+packages = ["src/jsonclass"]
